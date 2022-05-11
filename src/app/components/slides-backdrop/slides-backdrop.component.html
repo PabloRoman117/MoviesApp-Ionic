@@ -1,0 +1,19 @@
+<ion-grid fixed>
+  <ion-row>
+    <ion-col>
+      <h3 class="text-center margen shadow-lg">Peliculas recientes</h3>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-slides mode="ios" pager="ios">
+  <ion-slide *ngFor="let pelicula  of discover">
+    <div  class="card mt-3 carta text-white" style="width: 23rem;">
+      <img  [src]="pelicula.backdrop_path | imagen" class="card-img-top" alt="{{pelicula.title}}">
+      <div class="card-body">
+        <h1 class="card-title ">{{pelicula.title}}</h1>
+        <a (click)="showDetails(pelicula.id)" class=" btn btn-grad mb-4 ">Ver Pelicula</a>
+      </div>
+    </div>
+  </ion-slide>
+</ion-slides>
+<hr/>

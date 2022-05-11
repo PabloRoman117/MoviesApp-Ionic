@@ -1,17 +1,36 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar >
     <ion-title>
-      Tab 1
+      Peliculas
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content [fullscreen]="true" >
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 220"><path fill="#273036" fill-opacity="1" d="M0,160L48,170.7C96,181,192,203,288,181.3C384,160,480,96,576,101.3C672,107,768,181,864,192C960,203,1056,149,1152,138.7C1248,128,1344,160,1392,176L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+  <app-slides-backdrop [discover]="discover"></app-slides-backdrop>
+  <app-slides-poster [discover]="discover" title="Cartelera"></app-slides-poster>
+  <app-slides-poster [discover]="popularity" title="Populares"></app-slides-poster>
+  
+  
+  <!-- <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3 class="text-center margen shadow-mg">Peliculas recientes</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-slides mode="ios" pager="ios">
+    <ion-slide *ngFor="let pelicula  of discover">
+      <div class="card mt-3" style="width: 23rem;">
+        <img [src]="pelicula.backdrop_path | imagen" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h1 class="card-title">{{pelicula.title}}</h1>
+          <p class="card-text">{{pelicula.overview}}</p>
+          <a href="#" class="btn btn-primary">Ver Pelicula</a>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides> -->
+  
 </ion-content>

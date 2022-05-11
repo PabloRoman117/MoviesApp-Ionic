@@ -1,0 +1,31 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>{{details.title}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <ion-slides  mode="ios" pager="ios">
+          <ion-slide *ngFor="let actor of credits" class="card mt-3" >
+            
+              <img [src]="actor.profile_path | imagen" class="card-img-top" alt="{{actor.name}}">
+              <h1 class="card-title">{{actor.name}}</h1>
+              <p class="card-footer">{{actor.character}}</p>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+     
+    </ion-row>
+  </ion-grid>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button color="danger" (click)="cerrar()" expand="block" fill="clear" >
+        Cerrar
+      </ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

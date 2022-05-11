@@ -1,0 +1,25 @@
+
+<ion-grid fixed>
+  
+  <ion-row>
+    
+    <ion-col>
+      <h3 class="text-center margen shadow-lg">{{title}}</h3>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-slides mode="ios" pager="ios">
+  <ion-slide *ngFor="let pelicula  of discover">
+    <div class="text-center card mt-3 carta text-white mb-5" style="width: 23rem;">
+      
+      <img class="poster" [src]="pelicula.poster_path| imagen" class="card-img-top" alt="{{pelicula.title}}">
+      
+
+    </div>
+
+    
+  </ion-slide>
+  
+</ion-slides>
+
+<hr/>
